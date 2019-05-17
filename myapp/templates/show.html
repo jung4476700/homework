@@ -1,0 +1,15 @@
+<h4><a href="{% url 'post' %}"><글작성하러가기> </a></h4>
+{%for board in boards.all%}
+    <div class="container">
+        <a href ="{% url 'detail' board.id %}">
+            <h1>제목: {{board.title}}</h1>
+        </a>
+        <p> 내용 : {{board.body}}</p>
+        <small class="text-muted">{{board.pub_date}}</small>
+        <iframe width="420" height="315"
+        {% if board.video_key %}
+        src="https://www.youtube.com/embed/{{board.video_key}}">
+        {%endif%}
+        </iframe>
+    </div>
+{%endfor%}
