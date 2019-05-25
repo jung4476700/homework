@@ -1,3 +1,5 @@
+{% extends 'post.html' %}
+{% block content %}
 <h4><a href="{% url 'post' %}"><글작성하러가기> </a></h4>
 {%for board in boards.all%}
     <div class="container">
@@ -13,3 +15,4 @@
         </iframe>
     </div>
 {%endfor%}
+{% endblock %}
