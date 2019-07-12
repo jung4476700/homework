@@ -1,5 +1,6 @@
 {% extends 'post.html' %}
 {% block content %}
+
 <p> 안녕하세요 저는 덕성여대 멋사 7기 김정희 입니다. 저는 사람들이 리뷰를 남길 수 있는 웹 서비스를 만들고 싶습니다</p>
 <h4><a href="{% url 'post' %}"><글작성하러가기> </a></h4>
 {%for board in boards.all%}
